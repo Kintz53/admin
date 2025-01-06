@@ -5,6 +5,14 @@
     <title>Admin</title>
 </head>
 <body>
+{% for game in jeux %}
+                <h3>Partie {{ forloop.counter }}</h3>
+                <p>taille de map : {{ game.taille_map }},
+                nombre de tour : {{ game.nbr_tour }},
+                temps du tour : {{ game.timeout_tour }},
+                partie commencé :{{ game.demarrer_partie }}</p>
+                <hr>
 
+{% endfor %}
 </body>
 </html>
